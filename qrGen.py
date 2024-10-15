@@ -31,9 +31,8 @@ class MiGUI(wx.Frame):
         name = self.text_component_1.GetValue()
         url = self.text_component_2.GetValue()
         qr.generate(name,url)
-        print(f"Nombre: {name}, URL: {url}")
 
-        img_path = name+'.png'  # Reemplaza con la ruta real de tu archivo PNG
+        img_path = qr.path()  # Reemplaza con la ruta real de tu archivo PNG
         img = wx.Image(img_path, wx.BITMAP_TYPE_PNG)
 
         # Mostrar imagen en popup
